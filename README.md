@@ -1,5 +1,5 @@
 # billboard-classifier
-Classify songs appearing on the billboard Top 100 based on Spotify and billboard data
+Classifying which songs on spotify appear on the billboard Top 100
 
 An ensemble model is created that predicts whether or not a song with a given set of attributes appeared the billboard top 100 playlist. This requires data on music in general, as well as data on what songs have achieved this status. For song attributes, a kaggle dataset of 160,000+ songs are their associated features derived from data sourced from Spotify was obtained. For billboard 100 data, a datset containing data going back to 1999 and was obtained and then cleaned. To ensure a valid comparison for the model, the spotify dataset was pruned down to just entries containing songs published in 1999 or later. Next the 'billboard' dataframe had to be pruned and reformatted to provide the right information for the model in a useable format. This dataframe was then joined with the pruned spotify dataframe using a jaccard join based on the artist and song title information in each row.
 
